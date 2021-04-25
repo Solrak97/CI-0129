@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/8_puzzle.dir/src/8_puzzle.cpp.o -o 8_puzzle 

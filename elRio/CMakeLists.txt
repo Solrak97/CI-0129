@@ -14,4 +14,8 @@ add_executable("8_puzzle"
 	"include/a_star.h"
 	"src/8_puzzle.cpp")
 
+add_executable("CruzandoElRio"
+	"include/a_star.h"
+	"src/cruzandoRio.cpp")	
+
 # Aquí puede agregar la implementación de sus soluciones, como los ejemplos anteriores.
