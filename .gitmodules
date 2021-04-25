@@ -1,0 +1,3 @@
+[submodule "astar"]
+	path = astar
+	url = https://git.ucr.ac.cr/ci0129/astar.git
