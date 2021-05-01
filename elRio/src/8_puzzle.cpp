@@ -6,7 +6,7 @@
 
 #include "a_star.h"
 
-/* Ejemplo de solución al problema 8 Puzzle utilizando el algoritmo A*. */
+/* Ejemplo de soluciï¿½n al problema 8 Puzzle utilizando el algoritmo A*. */
 
 using namespace ia;
 
@@ -15,23 +15,23 @@ constexpr int NUM_FILAS = 3;
 constexpr int NUM_COLUMNAS = 3;
 
 // Repesenta el estado del tablero. Como el tablero es una matriz de char,
-// se utiliza el caracter ' ' como el espacio vacío,
-// y los números como su representación ASCII (caracteres del '1' al '8 ).
+// se utiliza el caracter ' ' como el espacio vacï¿½o,
+// y los nï¿½meros como su representaciï¿½n ASCII (caracteres del '1' al '8 ).
 using Tablero = std::array<std::array<char, NUM_COLUMNAS>, NUM_FILAS>;
 
 // Almacena los tableros conocidos para no repetir nodos.
-// Hay formas de mejorar la implementación actual para eliminar esta tabla de búsqueda.
+// Hay formas de mejorar la implementaciï¿½n actual para eliminar esta tabla de bï¿½squeda.
 std::map<Tablero, Nodo<Tablero>*> TABLEROS_CONOCIDOS;
 
 // Extiende a la clase abstracta Nodo y utiliza Tablero como el tipo para la plantilla.
 // Esto quiere decir que cada nodo contiene como estado a un tablero.
-// Heredar e implementar estos métodos es lo que tienen que hacer para resolver problemas con este código.
+// Heredar e implementar estos mï¿½todos es lo que tienen que hacer para resolver problemas con este cï¿½digo.
 class Nodo8Puzzle : public Nodo<Tablero>
 {
 public:
     Nodo8Puzzle(Tablero tablero) : Nodo<Tablero>(tablero) {}
 
-    // Se implementa el método abstracto que calcula las posibles transiciones o tableros vecinos
+    // Se implementa el mï¿½todo abstracto que calcula las posibles transiciones o tableros vecinos
     // a los que se puede llegar a partir del tablero actual.
     ListaAdyacencia<Tablero> obtener_vecinos() const override
     {
@@ -68,7 +68,7 @@ public:
     }
 
 private:
-    // Calcula si una fila y una columna pertenecen a la cuadrícula del tablero.
+    // Calcula si una fila y una columna pertenecen a la cuadrï¿½cula del tablero.
     bool coordenadas_validas(int fila, int columna) const
     {
         return fila >= 0 && fila < NUM_FILAS && columna >= 0 && columna < NUM_COLUMNAS;
@@ -100,7 +100,7 @@ private:
         return nullptr;
     }
 
-    // Analiza los movimientos posibles en las direcciones válidas.
+    // Analiza los movimientos posibles en las direcciones vï¿½lidas.
     ListaAdyacencia<Tablero> analizar_posibles_movimientos(int fila, int columna) const
     {
         ListaAdyacencia<Tablero> vecinos;
@@ -124,8 +124,8 @@ private:
 };
 
 // Calcula el costo de asociado a una celda en el tablero. Como se usa la distancia Manhattan,
-// este cálculo representa qué tan alejado está esta ficha de su posición correcta en el tablero,
-// o cuántos movimientos tengo que hacer para ponerla en su posición correcta.
+// este cï¿½lculo representa quï¿½ tan alejado estï¿½ esta ficha de su posiciï¿½n correcta en el tablero,
+// o cuï¿½ntos movimientos tengo que hacer para ponerla en su posiciï¿½n correcta.
 double calcular_costo(int valor_numerico, int fila, int columna)
 {
     int fila_correcta = (valor_numerico - 1) / NUM_COLUMNAS;
@@ -134,7 +134,7 @@ double calcular_costo(int valor_numerico, int fila, int columna)
     return distancia_manhattan(fila, columna, fila_correcta, columna_correcta);
 }
 
-// La heurística para un tablero es la suma de los costos de todas sus celdas.
+// La heurï¿½stica para un tablero es la suma de los costos de todas sus celdas.
 Heuristica<Tablero> heuristica_8puzzle = [](Nodo<Tablero> *fuente, Nodo<Tablero> *destino) {
     auto tablero = fuente->obtener_estado();
     double costo = 0.0;
@@ -180,10 +180,10 @@ int main()
     TABLEROS_CONOCIDOS.insert({ nodo_destino->obtener_estado(), nodo_destino });
 
     // Ejecutar el algoritmo A* para el problema 8 Puzzle.
-    // Note que aquí puede cambiar la heurística para observar diferentes resultados.
+    // Note que aquï¿½ puede cambiar la heurï¿½stica para observar diferentes resultados.
     auto camino = resolver_a_star(nodo_fuente, nodo_destino, heuristica_8puzzle);
 
-    // Imprimir solución.
+    // Imprimir soluciï¿½n.
     std::cout << "Camino:\n";
     for (const auto& nodo : camino)
     {
