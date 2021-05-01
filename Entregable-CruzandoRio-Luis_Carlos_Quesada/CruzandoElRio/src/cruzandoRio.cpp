@@ -31,7 +31,7 @@ bool estadoValido(Estado estado){
 
 class NodoRio : public Nodo<Estado> {
 private:
-    Nodo<Estado> * analizaMovimiento(int pos) const {
+    Nodo<Estado>* analizaMovimiento(int pos) const {
         Estado estado = _estado;
         if ((_estado[0] && _estado[pos]) || (!_estado[0] && !_estado[pos])){
             estado[pos] = !estado[pos];

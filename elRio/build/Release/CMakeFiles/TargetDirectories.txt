@@ -1,5 +1,0 @@
-/home/solrak/Documents/Inteligencia-Artificial/elRio/build/Release/CMakeFiles/rebuild_cache.dir
-/home/solrak/Documents/Inteligencia-Artificial/elRio/build/Release/CMakeFiles/edit_cache.dir
-/home/solrak/Documents/Inteligencia-Artificial/elRio/build/Release/CMakeFiles/CruzandoElRio.dir
-/home/solrak/Documents/Inteligencia-Artificial/elRio/build/Release/CMakeFiles/8_puzzle.dir
-/home/solrak/Documents/Inteligencia-Artificial/elRio/build/Release/CMakeFiles/grafo.dir

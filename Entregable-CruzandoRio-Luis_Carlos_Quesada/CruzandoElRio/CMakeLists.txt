@@ -6,14 +6,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories("include")
 
-add_executable("grafo"
-	"include/a_star.h"
-	"src/grafo.cpp")
-
-add_executable("8_puzzle"
-	"include/a_star.h"
-	"src/8_puzzle.cpp")
-
 add_executable("CruzandoElRio"
 	"include/a_star.h"
 	"src/cruzandoRio.cpp")	
