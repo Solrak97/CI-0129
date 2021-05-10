@@ -1,0 +1,3 @@
+/home/solrak/Documents/Inteligencia-Artificial/Entregable-CruzandoRio-Luis_Carlos_Quesada/CruzandoElRio/build/Release/CMakeFiles/rebuild_cache.dir
+/home/solrak/Documents/Inteligencia-Artificial/Entregable-CruzandoRio-Luis_Carlos_Quesada/CruzandoElRio/build/Release/CMakeFiles/edit_cache.dir
+/home/solrak/Documents/Inteligencia-Artificial/Entregable-CruzandoRio-Luis_Carlos_Quesada/CruzandoElRio/build/Release/CMakeFiles/CruzandoElRio.dir
