@@ -1,3 +1,6 @@
 [submodule "astar"]
 	path = astar
 	url = https://git.ucr.ac.cr/ci0129/astar.git
+[submodule "INVESTIGACION_CI0129"]
+	path = INVESTIGACION_CI0129
+	url = https://github.com/Solrak97/INVESTIGACION_CI0129.git
